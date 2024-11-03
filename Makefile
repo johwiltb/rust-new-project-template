@@ -6,6 +6,9 @@ rust-version:
 	rustup --version			#rust toolchain manager
 	clippy-driver --version		#rust linter
 
+format-check:
+	cargo fmt --check
+
 format:
 	cargo fmt --quiet
 
@@ -19,6 +22,9 @@ run:
 	cargo run
 
 release:
+	cargo build --release
+
+build-release:
 	cargo build --release
 
 all: format lint test run
